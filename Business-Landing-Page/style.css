@@ -1,0 +1,428 @@
+/* Global styles */
+.bg-gradient {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse, #393838, #000000);
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-gray {
+    background-color: gray;
+}
+
+/* Font classes */
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.font-orbitron {
+    font-family: "Orbitron", sans-serif;
+}
+
+.font-roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Navigation styles */
+nav.nav-container {
+    position: sticky;
+    top: 0; /* This is crucial - it tells the browser where to "stick" the element */
+    z-index: 100; /* Ensures the navbar stays on top of other content */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 2em;
+}
+
+.nav-text {
+    margin: 0 1em;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.logo-trapezoid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 2em;
+    margin: 0 1em;
+    background-color: white;
+    clip-path: polygon(5% 0, 95% 0, 80% 100%, 20% 100%);
+}
+
+.logo {
+    height: 3em;
+    width: auto;
+    z-index: 1;
+    cursor: pointer; /* This makes the cursor change to a hand when hovering over the logo */
+}
+
+/* Hero section */
+.hero-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 13em;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    margin-top: 7em;
+    filter: blur(1px); /* Adds blur effect */
+}
+
+#hero-text {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    z-index: 2;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    padding: 5em 2em;
+    position: relative;
+}
+
+.about-left,
+.about-right {
+    flex: 1;
+    padding: 1em;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.section-subtitle {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #cccccc;
+}
+
+.section-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+.location-title {
+    font-size: 1.3em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    color: #cccccc;
+}
+
+.location-text {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Products Section */
+.products-container {
+    padding: 5em 2em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.product-card {
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 1.5em;
+}
+
+.product-title {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.product-description {
+    color: #cccccc;
+    font-size: 0.9em;
+}
+
+/* Services Section */
+.services-container {
+    padding: 5em 2em;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.service-card {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 10px;
+    padding: 2em;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.service-title {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.service-description {
+    color: #cccccc;
+    font-size: 0.9em;
+}
+
+/* Contact Section */
+.contact-container {
+    padding: 5em 2em;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    background-color: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 2em;
+}
+
+.contact-info {
+    padding: 2em;
+    width: 100%;
+}
+
+.info-item {
+    margin-bottom: 1.5em;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 0.5em;
+    color: white;
+}
+
+.info-item p {
+    color: #cccccc;
+    margin: 0;
+}
+
+/* Footer with equal width columns */
+.footer {
+    padding: 3em 2em 1em;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row; /* Always use row layout */
+    justify-content: space-between; /* Space them evenly */
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.footer-logo,
+.footer-links,
+.footer-social {
+    width: 33%; /* Each div takes exactly 33% */
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    justify-content: flex-start; /* Align logo to the left */
+}
+
+.footer-logo-img {
+    height: 5em;
+    max-width: 100%;
+}
+
+.footer-links {
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1em;
+    padding: 0.5em;
+}
+
+.footer-link:hover {
+    color: #cccccc;
+}
+
+.footer-social {
+    justify-content: flex-end; /* Align social icons to the right */
+    gap: 1em;
+    padding-right: 1.5em; /* Add padding to the right side */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2em;
+    border-top: 1px solid #444;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-social {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1.5em;
+    }
+}
+
+/* Optional: Add this for larger screens if you want elements to be side by side */
+@media (min-width: 992px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Company Title with split colors */
+.company-title {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.3em;
+}
+
+.company-title .gensys {
+    background: linear-gradient(90deg, #ff0000, #cc0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+}
+
+.company-title .enterprise {
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+.company-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ffffff
+    ); /* Red to white gradient */
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Social media icons styling */
+.social-icon-img {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #545454;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.social-icon-img:hover {
+    border-color: #808080;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
